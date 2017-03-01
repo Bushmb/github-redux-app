@@ -1,5 +1,5 @@
 import React from 'react';
-import {connect} form 'react-redux';
+import {connect} from 'react-redux';
 
 import Repository from './repository';
 import * as actions from '../actions/index';
