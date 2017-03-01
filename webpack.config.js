@@ -16,6 +16,10 @@ module.exports = {
           exclude: /(node_modules)/,
           loader: 'babel',
         },
+        // {
+        //   test: /\.(eot|svg|ttf|woff|woff2)$/,
+        //   loader: 'file?name=/fonts/[name].[ext]'
+        // }
       ]
     }
 };
