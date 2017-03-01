@@ -1,30 +1,31 @@
 import React from 'react';
+
 import Repository from './repository';
 
-class RespositoryList extends React.Component {
-	constructor(props) {
-		super(props);
-		this.addRepository = this.addRepository.bind(this);
-	}
+export default class RepositoryList extends React.Component {
+    constructor(props) {
+        super(props);
+        this.addRepository = this.addRepository.bind(this);
+    }
 
-	addRepository() {
-		const repositoryName = this.repositoryNameInput.value;
-		// TODO: Add the repository to the state
-	}
+    addRepository() {
+        const repositoryName = this.repositoryNameInput.value;
+        // TODO: Add the repository to the state
+    }
 
-	render() {
-		const repositories = this.props.repositories.map(repository => {
-			return <Repository repository={repository} key={repository.name} />
-		});
+    render() {
+        const repositories = this.props.repositories.map(repository => {
+            return <Repository repository={repository} key={repository.name} />;
+        });
 
-		return (
-			<div className="repository-list">
-				{repositories}
-				<input type="text" ref={ref => this.repositoryNameInput = ref} />
-				<button type="button" onClick={this.addRepository}> Add repository</button>
-			</div>
-		)
-	}
-}	
-
-export default RespositoryList;
+        return (
+            <div className="repository-list">
+                {repositories}
+                <input type="text" ref={ref => this.repositoryNameInput = ref} />
+                <button type="button" onClick={this.addRepository}>
+                    Add repository
+                </button>
+            </div>
+        );
+    }
+}
